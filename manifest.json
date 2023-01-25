@@ -1,0 +1,16 @@
+{
+    "name": "gitlab-mr-slack",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "gitlab-mr-slack.html"
+    },
+    "permissions": [
+     "activeTab",
+     "scripting",
+     "tabs",
+     "clipboardWrite"
+     ],
+     "icons": { "128": "images/pr_128px.png" }
+}
