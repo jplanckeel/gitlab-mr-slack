@@ -1,6 +1,6 @@
-# chrome-gitlab-mr-slack
+# gitlab-mr-slack
 
-Chrome plugin to copy in clipboard MR review message for slack.
+Web plugin to copy in clipboard MR review message for slack.
 
 ## How to use 
 

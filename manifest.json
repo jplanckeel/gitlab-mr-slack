@@ -4,7 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "action": {
-      "default_popup": "gitlab-mr-slack.html"
+      "default_popup": "index.html"
     },
     "permissions": [
      "activeTab",
