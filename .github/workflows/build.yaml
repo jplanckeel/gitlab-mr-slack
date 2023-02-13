@@ -1,0 +1,79 @@
+---
+name: Build Browser Extension
+
+on:
+  pull_request:
+    paths:
+      - '*'
+      - '!*.md'
+      - '!*.txt'
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '*'
+      - '!*.md'
+      - '!*.txt'
+      - '.github/workflows/build.yml'
+  workflow_call:
+    inputs: {}
+  workflow_dispatch:
+    inputs: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846  # v3.0.0
+
+      - name: Set up Node
+        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd  # v3.3.0
+        with:
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+          node-version: '16'
+
+      - name: Print environment
+        run: |
+          node --version
+          npm --version
+
+      - name: Build
+        run: npm run dist
+
+      - name: Build Manifest v3
+        run: npm run dist:mv3
+
+      - name: Upload Chrome artifact
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535  # v3.0.0
+        with:
+          name: dist-chrome-${{ github.sha }}.zip
+          path: dist-chrome.zip
+          if-no-files-found: error
+
+      - name: Upload Chrome MV3 artifact
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535  # v3.0.0
+        with:
+          name: dist-chrome-MV3-${{ github.sha }}.zip
+          path: dist-chrome-mv3.zip
+          if-no-files-found: error
+
+      - name: Upload Firefox artifact
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535  # v3.0.0
+        with:
+          name: dist-firefox-${{ github.sha }}.zip
+          path: dist-firefox.zip
+          if-no-files-found: error
+
+      - name: Upload Firefox MV3 artifact
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535  # v3.0.0
+        with:
+          name: dist-firefox-MV3-${{ github.sha }}.zip
+          path: dist-firefox-mv3.zip
+          if-no-files-found: error
