@@ -1,7 +1,6 @@
 const child = require("child_process");
 const fs = require("fs");
 
-const del = require("del");
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
 const jeditor = require("gulp-json-editor");
