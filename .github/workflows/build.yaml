@@ -39,6 +39,10 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
           node-version: '16'
 
+      - name: Npm install 
+        run: |
+          npm install
+
       - name: Print environment
         run: |
           node --version
