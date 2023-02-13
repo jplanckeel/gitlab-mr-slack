@@ -72,7 +72,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist-chrome.zip
+          asset_path: ./dist-chrome.zip
           asset_name: dist-chrome-${{ github.sha }}.zip
           asset_content_type: application/gzip
 
@@ -82,7 +82,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist-chrome-MV3.zip
+          asset_path: ./dist-chrome-MV3.zip
           asset_name: dist-chrome-MV3-${{ github.sha }}.zip
           asset_content_type: application/gzip
 
@@ -92,7 +92,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist-firefox.zip
+          asset_path: ./dist-firefox.zip
           asset_name: dist-firefox-${{ github.sha }}.zip
           asset_content_type: application/gzip
 
@@ -102,6 +102,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist-firefox-MV3.zip
+          asset_path: ./dist-firefox-MV3.zip
           asset_name: dist-firefox-MV3-${{ github.sha }}.zip
           asset_content_type: application/gzip
