@@ -6,16 +6,20 @@ Compatbile with chrome, chromium like and firefox,
 
 ## How to use 
 
-On merge request page, click on buton "Copy" for message to clipboard
+On merge request page, click on buton "Review" for message to clipboard
 
 ![example](/images/example.png?raw=true)
 
-The message is formated 
+Review message is formated 
 
 ```
 :please_review: `folder/project` title of merger request [MR123](https://merge-request-url.example)
 ```
+Merged message is formated 
 
+```
+:merged: `folder/project` title of merger request [MR123](https://merge-request-url.example)
+```
 
 ## Slack 
 
