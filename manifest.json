@@ -1,7 +1,7 @@
 {
     "name": "gitlab-mr-slack",
-    "description": "Base Level Extension",
-    "version": "1.0",
+    "description": "On gitlab merge resuest page format message for slack.",
+    "version": "0.2",
     "manifest_version": 3,
     "action": {
       "default_popup": "gitlab-mr-slack.html"
