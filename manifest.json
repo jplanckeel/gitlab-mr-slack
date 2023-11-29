@@ -1,22 +1,22 @@
 {
-    "name": "gitlab-mr-slack",
-    "description": "On gitlab merge request page format message for slack.",
-    "version": "0.2",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "gitlab-mr-slack.html"
-    },
-    "permissions": [
-     "activeTab",
-     "scripting",
-     "tabs",
-     "clipboardWrite"
-     ],
-     "icons": { "128": "images/pr_128px.png" },
-     "browser_specific_settings": {
-      "gecko": {
-        "id": "gitlab-mr-slack@jplanckeel",
-        "strict_min_version": "42.0"
-      }
+  "name": "gitlab-mr-slack",
+  "description": "On gitlab merge request page format message for slack.",
+  "version": "0.0.2",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "gitlab-mr-slack.html"
+  },
+  "permissions": [
+   "activeTab",
+   "scripting",
+   "tabs",
+   "clipboardWrite"
+   ],
+   "icons": { "128": "images/pr_128px.png" },
+   "browser_specific_settings": {
+    "gecko": {
+      "id": "gitlab-mr-slack@jplanckeel",
+      "strict_min_version": "48.0"
     }
+  }
 }
