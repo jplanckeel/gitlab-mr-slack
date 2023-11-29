@@ -28,3 +28,18 @@ By default slack don't format markdown text, you have to solution to format mark
 - Active `Format messages with markup` in preference/advanced
 
 - Use shortcut to apply markdown format : `Maj + CMD + F`
+
+
+## Build for firefox
+
+Requierments:
+NodeJs v20.10.0 < 21
+Web-ext >7.5.0
+
+```
+nvm install 20
+nvm use node 20
+npm install web-ext
+web-ext sign --api-key <APIKEY> --api-secret <SECRETKEY>
+web-ext build
+```

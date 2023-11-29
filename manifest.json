@@ -1,6 +1,6 @@
 {
     "name": "gitlab-mr-slack",
-    "description": "On gitlab merge resuest page format message for slack.",
+    "description": "On gitlab merge request page format message for slack.",
     "version": "0.2",
     "manifest_version": 3,
     "action": {
@@ -12,5 +12,11 @@
      "tabs",
      "clipboardWrite"
      ],
-     "icons": { "128": "images/pr_128px.png" }
+     "icons": { "128": "images/pr_128px.png" },
+     "browser_specific_settings": {
+      "gecko": {
+        "id": "gitlab-mr-slack@jplanckeel",
+        "strict_min_version": "42.0"
+      }
+    }
 }
